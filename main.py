@@ -222,7 +222,7 @@ def handle_bgmi(message):
             if time > 241:
                 response = "Error: Time interval must be less than 240."
             else:
-                record_command_logs(user_id, '/bgmi', target, port, time)
+                record_command_logs(user_id, '/UDPBYPASS', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./bgmi {target} {port} {time} 200"
