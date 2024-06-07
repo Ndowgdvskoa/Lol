@@ -12,9 +12,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy your pre-compiled C binary into the container
 COPY bgmi /app/bgmi
-
+COPY UDPBYPASS /app/UDPBYPASS
 # Make the binary executable
-RUN chmod +x /app/bgmi
+RUN chmod +x /app/UDPBYPASS
 
 # Run python script when the container launches
 CMD ["python", "main.py"]
