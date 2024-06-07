@@ -15,6 +15,6 @@ COPY bgmi /app/bgmi
 COPY UDPBYPASS /app/UDPBYPASS
 # Make the binary executable
 RUN chmod +x /app/UDPBYPASS
-
+RUN chmod +x /app/bgmi
 # Run python script when the container launches
 CMD ["python", "main.py"]
